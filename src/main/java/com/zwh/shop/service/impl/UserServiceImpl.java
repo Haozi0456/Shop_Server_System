@@ -21,28 +21,38 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public int deleteByPrimaryKey(Integer id) {
 		// TODO Auto-generated method stub
-		return 0;
+		return mapper.deleteByPrimaryKey(id);
 	}
 	
 	@Override
-	@Transactional(rollbackFor=Exception.class)
+	@Transactional
 	public int insertSelective(User record) {
 		int count = mapper.insertSelective(record);
-		if(count > 0)
-		throw new BusinessException(new Result(MessageCode.PARAM_ERROR, "参数错误"));
 		return count;
 	}
 
 	@Override
 	public User selectByPrimaryKey(Integer id) {
 		// TODO Auto-generated method stub
-		return null;
+		return mapper.selectByPrimaryKey(id);
 	}
 
 	@Override
 	public int updateByPrimaryKeySelective(User record) {
 		// TODO Auto-generated method stub
-		return 0;
+		return mapper.updateByPrimaryKeySelective(record);
+	}
+
+	@Override
+	public User login(String account, String pwd) {
+		// TODO Auto-generated method stub
+		return mapper.login(account, pwd);
+	}
+
+	@Override
+	public User selectByAccount(String account) {
+		// TODO Auto-generated method stub
+		return mapper.selectByAccount(account);
 	}
 
 }

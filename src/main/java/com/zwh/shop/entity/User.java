@@ -13,7 +13,7 @@ public class User {
 
     private String password;
 
-    private Boolean gender;
+    private int gender;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd") // 页面写入数据库时格式�?
 	@JSONField(format = "yyyy-MM-dd") // 数据库导出页面时json格式�?
@@ -65,11 +65,11 @@ public class User {
         this.password = password;
     }
 
-    public Boolean getGender() {
+    public int getGender() {
         return gender;
     }
 
-    public void setGender(Boolean gender) {
+    public void setGender(int gender) {
         this.gender = gender;
     }
 

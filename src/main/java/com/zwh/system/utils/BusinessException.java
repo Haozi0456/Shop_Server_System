@@ -2,6 +2,10 @@ package com.zwh.system.utils;
 
 import com.zwh.system.common.Result;
 
+/**
+ * @author ZhaoHao
+ * 业务逻辑错误异常处理
+ */
 public class BusinessException extends RuntimeException{
 	
 	private static final long serialVersionUID = 1L;

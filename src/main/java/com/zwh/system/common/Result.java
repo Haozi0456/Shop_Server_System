@@ -2,9 +2,11 @@ package com.zwh.system.common;
 
 public class Result {
 	
-	public static Result SUCCESS = new Result(MessageCode.SUCCESS);
+	public static Result SUCCESS = new Result(MessageCode.SUCCESS,"操作成功");
 	
-	public static Result ERROR = new Result(MessageCode.ERROR);
+	public static Result ERROR = new Result(MessageCode.ERROR,"操作错误");
+	
+	public static Result PARAM_ERROR = new Result(MessageCode.PARAM_ERROR,"参数错误");
 	
 	private int code;
 	private String msg = "";

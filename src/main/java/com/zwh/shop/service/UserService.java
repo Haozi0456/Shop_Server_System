@@ -13,5 +13,9 @@ public interface UserService {
     User selectByPrimaryKey(Integer id);
 
     int updateByPrimaryKeySelective(User record);
+    
+    User login(String account,String pwd);
+    
+    User selectByAccount(String account);
 
 }

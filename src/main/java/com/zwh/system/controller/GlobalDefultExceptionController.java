@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.zwh.system.common.MessageCode;
 import com.zwh.system.common.Result;
 import com.zwh.system.utils.BusinessException;
 
@@ -26,7 +27,7 @@ public class GlobalDefultExceptionController {
 			return new Result(businessException.getCode(), businessException.getMessage());
 		}
 		//未知错误
-		return new Result(-1, "系统异常:"+e);
+		return new Result(MessageCode.SYSTEM_ERROR, "系统异常:"+e);
 	}
 
 	

@@ -41,4 +41,9 @@ public interface MessageCode {
 	 */
 	public static final int EXIST_USER = 206;
 	
+	/**
+	 * 系统异常
+	 */
+	public static final int SYSTEM_ERROR = 207;
+	
 }
